@@ -1,9 +1,9 @@
 ### PROJECT: SHOES STORE
 - FEATURE BASIC: 
- + Crud product, brand, category...
- + Login token
- + Authen/author with Spring Security
- + Query search, support paging
+    + Crud product, brand, category...
+    + Login token
+    + Authen/author with Spring Security
+    + Query search, support paging
 
 
 
