@@ -1,0 +1,595 @@
+{
+	"info": {
+		"_postman_id": "ba4357b9-90c1-43c0-bcb6-37fc64104d51",
+		"name": "Store Shoes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10903446"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NTYzMjEzODMsImV4cCI6MTY1NjQwNzc4M30.AEQqLbbaHDGUJYu1mRFFcWO8nKPXpJmj98VfTuDGMppAT-lCiJ1BjybhxQuZxE3OdQFxsmyQOEM2M1-DLoCqyw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fileData",
+									"type": "file",
+									"src": "/C:/Users/Long-PC/Pictures/zenbook-wallpare.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/upload-image",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"upload-image"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Brand",
+			"item": [
+				{
+					"name": "Get all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/brands",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"brands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NTYzMjI5NTMsImV4cCI6MTY1NjQwOTM1M30.8P3DUV_TBxxh5GgMoM1DPwJgicie01hww5pxFMPvry4nU4GZ9DZeikgfw0_cGw44wlsl6M3FZH8xth1XKjutjQ",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImlhdCI6MTY1NTk3NzgyMSwiZXhwIjoxNjU2MDY0MjIxfQ.5WWRUxVrAKqTSU6uZFrBGMTJqFFgLdoflzBDDBR5xfE3SHc0mQGkJ3xPppckojbdBqr77S_y_Vq64oHHboFPwA",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bitis\",\r\n    \"thumbnail\": \"imgBitis.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/brands",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"brands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NTYzMzc4OTksImV4cCI6MTY1NjQyNDI5OX0.eas7P2IW0vjK3luzPxECpV0A5JrfuLdXmMoiDdP66ZjG8fOQBNYAuyY43jbySV4aOikrc7zHGnlTlAnedKcjGQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/brands/0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"brands",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NTYzMjM5MjMsImV4cCI6MTY1NjQxMDMyM30.jCCDDkLtcFrrLUEW4xuABOFpkqNr_evf10k3URLbJDI6AhizLs8zdhuMKzXkvkFgZdYbRKlEo80-ZJtxizthlQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bitis VN\",\r\n    \"thumbnail\": \"img1.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/brands/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"brands",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}/categories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NTYzMzc4OTksImV4cCI6MTY1NjQyNDI5OX0.eas7P2IW0vjK3luzPxECpV0A5JrfuLdXmMoiDdP66ZjG8fOQBNYAuyY43jbySV4aOikrc7zHGnlTlAnedKcjGQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"LGBT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/categories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NTYzMzc4OTksImV4cCI6MTY1NjQyNDI5OX0.eas7P2IW0vjK3luzPxECpV0A5JrfuLdXmMoiDdP66ZjG8fOQBNYAuyY43jbySV4aOikrc7zHGnlTlAnedKcjGQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/categories/0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories",
+								"0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get page",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NTYzMjkyOTcsImV4cCI6MTY1NjQxNTY5N30.cquJ04V6-FzqzKg4zQPSXRraBo8rWKFbUj6OLvuBf7jpyZVYoQHMWCbUiNtL3_L1hZVYMUQZ5gCGRB7Om22xDA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products/paging/0/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"paging",
+								"0",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products?name=nike",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "nike"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NTYzMjQ0MDUsImV4cCI6MTY1NjQxMDgwNX0.Lij609nPZOrnOaPdEDuzsSIZ3ZhKyTd8g3Y_IBppIbMhcFnBXI8WOEwQWcRAmPEb0u6QeWhr1HdCB_giB9C_CA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Giày thượng đình\",\r\n    \"price\": \"99000\",\r\n    \"description\": \"Giày dành cho học sinh con nhà nghèo rớt mồng tơi\",\r\n    \"image\": \"imageThuongdinh.img\",\r\n    \"brandId\": 3,\r\n    \"categoryIds\": [1, 2, 3]\r\n}\r\n\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Giày thượng đình Update\",\r\n    \"price\": \"99000\",\r\n    \"description\": \"Dành cho dân chơ thứ thiệt\",\r\n    \"image\": \"image00.img\",\r\n    \"brandId\": 3,\r\n    \"categoryIds\": [1, 2, 3]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/products/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NTYzMzc4OTksImV4cCI6MTY1NjQyNDI5OX0.eas7P2IW0vjK3luzPxECpV0A5JrfuLdXmMoiDdP66ZjG8fOQBNYAuyY43jbySV4aOikrc7zHGnlTlAnedKcjGQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/products/8",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get product by brand",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/brands/nike",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"brands",
+								"nike"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get product by category",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}/categories/nam",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories",
+								"nam"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
